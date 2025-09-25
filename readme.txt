@@ -1,6 +1,8 @@
 MITM ARP-Spoofing Skript
 
-Ein einfaches Python-Skript zur Durchführung eines Man-in-the-Middle (MITM)-Angriffs mittels ARP-Spoofing. Es nutzt Scapy, um ARP-Tabellen von Zielgerät und Gateway zu manipulieren, sodass der Netzwerkverkehr über die Angreifermaschine geleitet wird. Nur für Lernzwecke in kontrollierten Umgebungen wie TryHackMe verwenden!
+Ein einfaches Python-Skript zur Durchführung eines Man-in-the-Middle (MITM)-Angriffs mittels ARP-Spoofing. Es nutzt Scapy, 
+um ARP-Tabellen von Zielgerät und Gateway zu manipulieren, sodass der Netzwerkverkehr über die Angreifermaschine geleitet wird.
+ Nur für Lernzwecke in kontrollierten Umgebungen wie TryHackMe verwenden!
 
 
 Voraussetzungen
@@ -17,7 +19,7 @@ Voraussetzungen
 Installation
 
 
-1.  Installiere Scapy, falls nicht vorhanden:
+1. Installiere Scapy, falls nicht vorhanden:
 
 pip install scapy
 
@@ -28,9 +30,9 @@ pip install scapy
 
 Nutzung
 1.  Ermittle die IP-Adressen:
-	•  Ziel-IP: IP des Opfers (z. B. 10.10.10.5)
-	•  Gateway-IP: IP des Routers (z. B. 10.10.10.1)
-	•  Finde diese mit ip route (Gateway) oder durch Scannen (z. B. nmap)
+•  Ziel-IP: IP des Opfers (z. B. 10.10.10.5)
+•  Gateway-IP: IP des Routers (z. B. 10.10.10.1)
+•  Finde diese mit ip route (Gateway) oder durch Scannen (z. B. nmap)
 
 
 2.  Starte das Skript als Root:
@@ -41,7 +43,8 @@ Beispiel:
 sudo python3 mitm_arp_spoof.py 10.10.10.5 10.10.10.1
 
 
-3.  Sniffe den Traffic parallel 
+3. Sniffe den Traffic parallel 
+
 sudo tcpdump -i eth0 -w capture.pcap
 oder starte Wireshark.
 
@@ -63,11 +66,10 @@ Hinweise
 
 •  TryHackMe: Perfekt für Rooms wie “Common Attacks” oder “Protocols and Servers 2”. Analysiere gesniffte Pakete, um Flags oder Passwörter zu finden.
 
-•  Fehlerbehebung:
-	•  Stelle sicher, dass Scapy korrekt installiert ist.
-	•  Überprüfe, ob IP-Forwarding aktiviert ist.
-	•  Nutze das richtige Netzwerkinterface (z. B. eth0).
-
+Fehlerbehebung
+•  Stelle sicher, dass Scapy korrekt installiert ist.
+•  Überprüfe, ob IP-Forwarding aktiviert ist.
+•  Nutze das richtige Netzwerkinterface (z. B. eth0).
 •  HTTPS-Traffic: Für verschlüsselten Traffic sind Tools wie SSLstrip oder Bettercap nötig (nicht enthalten).
 
 Warnung
@@ -75,6 +77,6 @@ Warnung
 Dieses Skript ist ausschließlich für ethische Hacking-Übungen in autorisierten Umgebungen gedacht. Die Nutzung in echten Netzwerken ohne Erlaubnis ist illegal und kann rechtliche Konsequenzen haben.
 
 
-# Lizenz
+Lizenz
 
 Dieses Skript wird ohne Gewähr bereitgestellt. Nutzung auf eigene Verantwortung.
