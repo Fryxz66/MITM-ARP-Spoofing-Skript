@@ -19,8 +19,8 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 ## Installation
 
 1.  Installiere Scapy:
-   
-   pip install -r requirements.txt
+
+`pip install -r requirements.txt`
 
 (Siehe requirements.txt für Details.)
 
@@ -36,19 +36,20 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 	•  Finde diese mit ip route (Gateway) oder durch Scannen (z. B. nmap)
 
 
-2.  Starte das Skript als Root
-   sudo python3 mitm_arp_spoof.py <Ziel-IP> <Gateway-IP
+2. Starte das Skript als root
+
+`sudo python3 mitm_arp_spoof.py <Ziel-IP> <Gateway-IP`
 
 
 Beispiel:
 
-      sudo python3 mitm_arp_spoof.py 10.10.10.5 10.10.10.1
+`sudo python3 mitm_arp_spoof.py 10.10.10.5 10.10.10.1`
 
   
 3.  Sniffe den Traffic parallel
-   
-  sudo tcpdump -i eth0 -w capture.pcap
-    - oder benutze Wireshark
+
+`sudo tcpdump -i eth0 -w capture.pcap`
+- oder benutze Wireshark
 
 
 5.  Beende das Skript mit Ctrl+C. 
@@ -58,21 +59,29 @@ Beispiel:
 ## Funktionsweise
 
 •  ARP-Spoofing: Sendet gefälschte ARP-Pakete, um Zielgerät und Gateway zu täuschen, sodass sie die Angreifermaschine als Gegenstelle sehen.
+
 •  Traffic-Weiterleitung: Mit aktiviertem IP-Forwarding wird der Traffic durchgeleitet, um den Angriff unauffällig zu halten.
+
 •  Rücksetzen: Beim Beenden werden die ARP-Tabellen der Geräte wiederhergestellt.
 
 
 ## TryHackMe-Tipps
 
 •  Perfekt für Rooms wie Common Attacks oder Protocols and Servers 2.
+
 •  Analysiere gesniffte Pakete (z. B. mit Wireshark), um Flags oder Passwörter zu finden.
+
 •  Für HTTPS-Traffic könnten Tools wie SSLstrip oder Bettercap nötig sein (nicht enthalten).
 
 
 ## Fehlerbehebung
+
 •  Stelle sicher, dass Scapy korrekt installiert ist (pip show scapy).
+
 •  Überprüfe, ob IP-Forwarding aktiviert ist.
+
 •  Nutze das richtige Netzwerkinterface (z. B. eth0).
+
 •  Falls MAC-Adressen nicht gefunden werden, überprüfe die Netzwerkkonfiguration.
 
 
