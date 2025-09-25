@@ -12,8 +12,7 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 - Netzwerkzugriff auf Ziel-IP und Gateway-IP
 - IP-Forwarding aktiviert:
       `echo 1 > /proc/sys/net/ipv4/ip_forward`
-
-	•  Tools wie Wireshark oder tcpdump zum Sniffen des Traffic (optional)
+- Tools wie Wireshark oder tcpdump zum Sniffen des Traffic (optional)
 
 
 ## Installation
