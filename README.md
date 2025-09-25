@@ -32,7 +32,9 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 
 1.  Ermittle die IP-Adressen:
 	•  Ziel-IP: IP des Opfers (z. B. 10.10.10.5)
+	
 	•  Gateway-IP: IP des Routers (z. B. 10.10.10.1)
+	
 	•  Finde diese mit ip route (Gateway) oder durch Scannen (z. B. nmap)
 
 
