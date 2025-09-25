@@ -19,6 +19,7 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 ## Installation
 
 1.  Installiere Scapy:
+   
    pip install -r requirements.txt
 
 (Siehe requirements.txt für Details.)
@@ -40,15 +41,17 @@ Ein einfaches Python-Skript zur Durchführung eines **Man-in-the-Middle (MITM)**
 
 
 Beispiel:
+
       sudo python3 mitm_arp_spoof.py 10.10.10.5 10.10.10.1
 
   
-3.  Sniffe den Traffic parallel 
+3.  Sniffe den Traffic parallel
+   
   sudo tcpdump -i eth0 -w capture.pcap
     - oder benutze Wireshark
 
 
-4.  Beende das Skript mit Ctrl+C. 
+5.  Beende das Skript mit Ctrl+C. 
    	  Es setzt die ARP-Tabellen automatisch zurück.
 
 
