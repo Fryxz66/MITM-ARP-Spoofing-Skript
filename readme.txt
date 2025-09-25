@@ -1,9 +1,9 @@
-# MITM ARP-Spoofing Skript
+MITM ARP-Spoofing Skript
 
 Ein einfaches Python-Skript zur Durchführung eines Man-in-the-Middle (MITM)-Angriffs mittels ARP-Spoofing. Es nutzt Scapy, um ARP-Tabellen von Zielgerät und Gateway zu manipulieren, sodass der Netzwerkverkehr über die Angreifermaschine geleitet wird. Nur für Lernzwecke in kontrollierten Umgebungen wie TryHackMe verwenden!
 
 
-# Voraussetzungen
+Voraussetzungen
 
 •  Python 3 und Scapy (pip install scapy)
 
@@ -50,7 +50,7 @@ oder starte Wireshark.
 
 
 
-# Funktionsweise
+Funktionsweise
 
 •  ARP-Spoofing: Das Skript sendet gefälschte ARP-Pakete, um Zielgerät und Gateway zu täuschen, sodass sie die Angreifermaschine als Gegenstelle sehen.
 
@@ -59,7 +59,7 @@ oder starte Wireshark.
 •  Rücksetzen: Beim Beenden werden die ARP-Tabellen der Geräte wiederhergestellt.
 
 
-# Hinweise
+Hinweise
 
 •  TryHackMe: Perfekt für Rooms wie “Common Attacks” oder “Protocols and Servers 2”. Analysiere gesniffte Pakete, um Flags oder Passwörter zu finden.
 
@@ -70,8 +70,7 @@ oder starte Wireshark.
 
 •  HTTPS-Traffic: Für verschlüsselten Traffic sind Tools wie SSLstrip oder Bettercap nötig (nicht enthalten).
 
-
-# Warnung
+Warnung
 
 Dieses Skript ist ausschließlich für ethische Hacking-Übungen in autorisierten Umgebungen gedacht. Die Nutzung in echten Netzwerken ohne Erlaubnis ist illegal und kann rechtliche Konsequenzen haben.
 
